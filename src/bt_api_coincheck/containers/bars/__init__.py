@@ -29,7 +29,7 @@ class CoincheckBarData(BarData):
         self.volume = 0.0
         self.has_been_init_data = False
 
-    def init_data(self) -> "CoincheckBarData":
+    def init_data(self) -> CoincheckBarData:
         if not self.has_been_json_encoded:
             self.bar_data = (
                 json.loads(self.bar_info) if isinstance(self.bar_info, str) else self.bar_info

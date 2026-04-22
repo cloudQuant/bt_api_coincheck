@@ -26,7 +26,7 @@ class CoincheckAccountData(AccountData):
         self.balances: list[Any] = []
         self.has_been_init_data = False
 
-    def init_data(self) -> "CoincheckAccountData":
+    def init_data(self) -> CoincheckAccountData:
         if not self.has_been_json_encoded:
             self.account_data = (
                 json.loads(self.account_info)

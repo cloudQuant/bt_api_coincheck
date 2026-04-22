@@ -21,7 +21,7 @@ class CoincheckOrderBookData(OrderBookData):
         self.symbol_name = symbol_name
         self.asset_type = asset_type
 
-    def init_data(self) -> "CoincheckOrderBookData":
+    def init_data(self) -> CoincheckOrderBookData:
         if not self.has_been_json_encoded:
             self.order_book_data = (
                 json.loads(self.order_book_info)

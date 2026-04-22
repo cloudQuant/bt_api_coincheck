@@ -23,7 +23,7 @@ class CoincheckOrderData(OrderData):
         self.asset_type = asset_type
         self.order_data: Any = order_info if has_been_json_encoded else None
 
-    def init_data(self) -> "CoincheckOrderData":
+    def init_data(self) -> CoincheckOrderData:
         if not self.has_been_json_encoded:
             self.order_data = (
                 json.loads(self.order_info) if isinstance(self.order_info, str) else self.order_info

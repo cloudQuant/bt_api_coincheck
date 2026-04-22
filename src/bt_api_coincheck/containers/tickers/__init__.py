@@ -33,7 +33,7 @@ class CoincheckTickerData(TickerData):
         self.volume: float | None = None
         self.has_been_init_data = False
 
-    def init_data(self) -> "CoincheckTickerData":
+    def init_data(self) -> CoincheckTickerData:
         if not self.has_been_json_encoded:
             self.ticker_data = (
                 json.loads(self.ticker_info)
@@ -107,4 +107,4 @@ class CoincheckWssTickerData(CoincheckTickerData):
     pass
 
 
-__all__ = ["CoincheckTickerData", "CoincheckRequestTickerData", "CoincheckWssTickerData"]
+__all__ = ["CoincheckRequestTickerData", "CoincheckTickerData", "CoincheckWssTickerData"]

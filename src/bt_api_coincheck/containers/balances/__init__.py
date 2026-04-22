@@ -25,7 +25,7 @@ class CoincheckBalanceData(BalanceData):
         self.local_update_time = time.time()
         self.has_been_init_data = False
 
-    def init_data(self) -> "CoincheckBalanceData":
+    def init_data(self) -> CoincheckBalanceData:
         if not self.has_been_json_encoded:
             self.balance_data = (
                 json.loads(self.balance_info)

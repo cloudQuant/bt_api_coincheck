@@ -2,10 +2,10 @@ from __future__ import annotations
 
 __version__ = "0.1.0"
 
-from bt_api_coincheck.exchange_data import CoincheckExchangeDataSpot, CoincheckExchangeData
+from bt_api_coincheck.exchange_data import CoincheckExchangeData, CoincheckExchangeDataSpot
 
 __all__ = [
-    "CoincheckExchangeDataSpot",
     "CoincheckExchangeData",
+    "CoincheckExchangeDataSpot",
     "__version__",
 ]
